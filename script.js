@@ -52,4 +52,10 @@ for (let i = 0; i < btnOpenModal.length; i++) {
       });
       break;
   }
+  document.addEventListener("keyup", (e) => {
+    if (e.key === "Escape" && !modal[i].classList.contains("hidden")) {
+      modal[i].classList.add("hidden");
+      overlay.classList.add("hidden");
+    }
+  });
 }
